@@ -1,0 +1,17 @@
+Language detection module is ngram.erl.  Based on ruby version found
+on github.com, http://github.com/feedbackmine/language_detector
+
+See the wikipedia article for more information about this method.
+http://en.wikipedia.org/wiki/Ngram
+
+To run tests use eunit  eunit:test('ngram')
+
+To build type `make`
+
+The beam files will be put in the ebin directory.  The training data
+is in the data directory.  This data is taken from wikipedia.  See
+source code for missing languages.
+
+
+
+
