@@ -160,6 +160,8 @@ ngrams([], _) ->
 ngrams(Text, Length) ->
     Tokens = tokenize(Text, Length),
     Rest = case length(Tokens) of
+               0 ->
+                   Tokens;
                1 ->
                    Tokens;
                _ ->
@@ -366,6 +368,10 @@ ngrams_test() ->
     ngrams("para poner este importante proyecto en práctica"),
     ngrams("what the what"),
     ngrams("what"),
+    ngrams(" "),
+    ngrams(""),
+    ngrams([]),
+    ngrams("", 140),
     ?assertEqual(true, true).
 
 ngram_test() ->
